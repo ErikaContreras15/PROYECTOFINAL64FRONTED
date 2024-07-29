@@ -1,24 +1,13 @@
-/*import { Component } from '@angular/core';
-
-@Component({
-  selector: 'app-lista-prestamo',
-  standalone: true,
-  imports: [],
-  templateUrl: './lista-prestamo.component.html',
-  styleUrl: './lista-prestamo.component.scss'
-})
-export class ListaPrestamoComponent {
-
-}*/
 
 import { Component, OnInit } from '@angular/core';
 //import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
 import { Prestamo } from '../../clase/Prestamo/prestamo';
 //import { ListaPrestamoService } from 'src/app/servicio/PrestamosUsuario/lista-prestamo.service';
-import { ListaPrestamoService } from '../../servicio/PrestamosUsuario/lista-usuario.service';
+//import { ListaPrestamoService } from '../../servicio/PrestamosUsuario/lista-prestamo.service';
 //import { LibroService } from 'src/app/servicio/Libro/libro.service';
 import { LibroService } from '../../servicio/Libro/libro.service';
 import { Router } from '@angular/router';
+import { ListaPrestamoService } from '../../servicio/PrestamosUsuario/prestamos-usuario.service';
 
 @Component({
   selector: 'app-listar-prestamos',

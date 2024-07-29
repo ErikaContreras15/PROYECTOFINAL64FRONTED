@@ -1,0 +1,8 @@
+<div>
+    <h1>{{ libro.titulo }}</h1>
+    <p><strong>Autor:</strong> {{ libro.autor }}</p>
+    <p><strong>ISBN:</strong> {{ libro.isbn }}</p>
+    <p><strong>Año publicación:</strong> {{ libro.anioPublicacion }}</p>
+    <p><strong>Estado:</strong> {{ libro.estado === 1 ? 'Disponible' : (libro.estado === 2 ? 'Prestado' : 'No Disponible') }}</p>
+  </div>
+  

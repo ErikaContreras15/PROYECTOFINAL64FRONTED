@@ -1,19 +1,11 @@
-/*import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class PrestamosUsuarioService {
-
-  constructor() { }
-}*/
-
 
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
-import { Libro } from 'src/app/clase/Libro/libro';
+//import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
+import { Prestamo } from '../../clase/Prestamo/prestamo';
+//import { Libro } from 'src/app/clase/Libro/libro';
+import { Libro } from '../../clase/Libro/libro';
 
 @Injectable({
   providedIn: 'root'

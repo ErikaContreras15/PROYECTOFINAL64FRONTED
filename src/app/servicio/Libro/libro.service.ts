@@ -12,7 +12,8 @@ export class LibroService {
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Libro } from 'src/app/clase/Libro/libro';
+//import { Libro } from 'src/app/clase/Libro/libro';
+import { Libro } from '../../clase/Libro/libro';
 
 @Injectable({
   providedIn: 'root'

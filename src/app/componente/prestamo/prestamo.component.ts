@@ -14,11 +14,14 @@ export class PrestamoComponent {
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PrestamoService } from 'src/app/servicio/Prestamo/prestamo.service';
-import { LibroService } from 'src/app/servicio/Libro/libro.service';
-import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
-import { Libro } from 'src/app/clase/Libro/libro';
-
+//import { PrestamoService } from 'src/app/servicio/Prestamo/prestamo.service';
+import { PrestamoService } from '../../servicio/Prestamo/prestamo.service';
+//import { LibroService } from 'src/app/servicio/Libro/libro.service';
+import { LibroService } from '../../servicio/Libro/libro.service';
+//import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
+import { Prestamo } from '../../clase/Prestamo/prestamo';
+//import { Libro } from 'src/app/clase/Libro/libro';
+import { Libro } from '../../clase/Libro/libro';
 @Component({
   selector: 'app-prestamo',
   templateUrl: './prestamo.component.html',

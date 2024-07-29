@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module'; // Importa el módulo d
 import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';  // Importar RouterModule
+//import { RegistroComponent } from './componente/Registro/registro.component';
+
 import { RegistroComponent } from './componente/Registro/registro.component';
 import { LoginComponent } from './componente/login/login.component';
 import { ActualizarClienteComponent } from './componente/actualizar-cliente/actualizar-cliente.component';

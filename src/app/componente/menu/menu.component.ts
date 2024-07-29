@@ -14,10 +14,20 @@ export class MenuComponent {
 // menu.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ListaPrestamoService } from 'src/app/servicio/PrestamosUsuario/lista-prestamo.service';
-import { CorreoService } from 'src/app/servicio/correo/correo.service'; // Asegúrate de importar tu servicio de email
-import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
-import { Libro } from 'src/app/clase/Libro/libro';
+//import { ListaPrestamoService } from 'src/app/servicio/PrestamosUsuario/lista-prestamo.service';
+import { ListaPrestamoService } from '../../servicio/PrestamosUsuario/lista-prestamo.service';
+//import { CorreoService } from 'src/app/servicio/correo/correo.service'; // Asegúrate de importar tu servicio de email
+import { CorreoService } from '../../servicio/correo/correo.service';
+//import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
+import { Prestamo } from '../../clase/Prestamo/prestamo';
+//import { Libro } from 'src/app/clase/Libro/libro';
+import { Libro } from '../../clase/Libro/libro';
+
+
+
+
+
+
 
 @Component({
   selector: 'menu',

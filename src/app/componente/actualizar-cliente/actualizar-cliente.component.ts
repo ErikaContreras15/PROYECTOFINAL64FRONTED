@@ -14,8 +14,10 @@ export class ActualizarClienteComponent {
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ActualizarClienteService } from 'src/app/servicio/Actualizar-cliente/actualizar-cliente.service';
-import { Cliente } from 'src/app/clase/Cliente/cliente';
+import { ActualizarClienteService } from '../../servicio/Actualizar-cliente/actualizar-cliente.service';
+//import { ActualizarClienteService } from 'src/app/servicio/Actualizar-cliente/actualizar-cliente.service';
+//import { Cliente } from 'src/app/clase/Cliente/cliente';
+import { Cliente } from '../../clase/Cliente/cliente';
 
 @Component({
   selector: 'app-actualizar-cliente',

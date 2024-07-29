@@ -11,8 +11,11 @@ export class ActualizarClienteService {
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+
 import { Observable } from 'rxjs';
-import { Cliente } from 'src/app/clase/Cliente/cliente';
+//import { Cliente } from 'src/app/clase/Cliente/cliente';
+import { Cliente } from '../../clase/Cliente/cliente';
+
 
 @Injectable({
   providedIn: 'root'

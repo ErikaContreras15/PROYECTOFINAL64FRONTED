@@ -14,9 +14,13 @@ export class LibroComponent {
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Libro } from 'src/app/clase/Libro/libro';
-import { LibroService } from 'src/app/servicio/Libro/libro.service';
-import { PrestamoService } from 'src/app/servicio/Prestamo/prestamo.service';
+//import { Libro } from 'src/app/clase/Libro/libro';
+import { Libro } from '../../clase/Libro/libro';
+//import { LibroService } from 'src/app/servicio/Libro/libro.service';
+import { LibroService } from '../../servicio/Libro/libro.service';
+//import { PrestamoService } from 'src/app/servicio/Prestamo/prestamo.service';
+import { PrestamoService } from '../../servicio/Prestamo/prestamo.service';
+
 
 @Component({
   selector: 'app-libro',

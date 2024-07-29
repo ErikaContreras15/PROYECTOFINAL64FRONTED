@@ -12,8 +12,11 @@ export class LoginComponent {
 }*/
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/clase/Usuarios/usuario';
-import { LoginService } from 'src/app/servicio/Login/login.service';
+//import { Usuario } from 'src/app/clase/Usuarios/usuario';
+import { Usuario } from '../../clase/Usuarios/usuario';
+//import { LoginService } from 'src/app/servicio/Login/login.service';
+import { LoginService } from '../../servicio/Login/login.service';
+
 
 @Component({
   selector: 'app-login',
@@ -31,7 +34,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.link = "http://localhost:8080/demoJakarta/rs/";
+    this.link = "http://localhost:8080/demoJakarta/rs/"; //URL DE ECLIPSE
     sessionStorage.setItem("link", this.link);
   }
 

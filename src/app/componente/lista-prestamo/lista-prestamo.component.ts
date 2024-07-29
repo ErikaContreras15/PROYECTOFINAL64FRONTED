@@ -12,9 +12,12 @@ export class ListaPrestamoComponent {
 }*/
 
 import { Component, OnInit } from '@angular/core';
-import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
-import { ListaPrestamoService } from 'src/app/servicio/PrestamosUsuario/lista-prestamo.service';
-import { LibroService } from 'src/app/servicio/Libro/libro.service';
+//import { Prestamo } from 'src/app/clase/Prestamo/prestamo';
+import { Prestamo } from '../../clase/Prestamo/prestamo';
+//import { ListaPrestamoService } from 'src/app/servicio/PrestamosUsuario/lista-prestamo.service';
+import { ListaPrestamoService } from '../../servicio/PrestamosUsuario/prestamos-usuario.service';
+//import { LibroService } from 'src/app/servicio/Libro/libro.service';
+import { LibroService } from '../../servicio/Libro/libro.service';
 import { Router } from '@angular/router';
 
 @Component({

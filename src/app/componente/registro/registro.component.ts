@@ -13,11 +13,14 @@ export class RegistroComponent {
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuario } from 'src/app/clase/Usuarios/usuario';
-import { RegistrarseService, CreateUsuarioResponse } from 'src/app/servicio/Registro/registro.service';
-import { ClienteService } from 'src/app/servicio/Cliente/cliente.service';
-import { Cliente } from 'src/app/clase/Cliente/cliente';  // Asegúrate de importar la clase Cliente
-
+//import { Usuario } from 'src/app/clase/Usuarios/usuario';
+import { Usuario } from '../../clase/Usuarios/usuario';
+//import { RegistrarseService, CreateUsuarioResponse } from 'src/app/servicio/Registro/registro.service';
+import { RegistrarseService,CreateUsuarioResponse } from '../../servicio/Registro/registro.service';
+//import { ClienteService } from 'src/app/servicio/Cliente/cliente.service';
+import { ClienteService } from '../../servicio/Cliente/cliente.service';
+//import { Cliente } from 'src/app/clase/Cliente/cliente';  // Asegúrate de importar la clase Cliente
+import { Cliente } from '../../clase/Cliente/cliente';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',

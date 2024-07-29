@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http'; // Importa HttpClientModule
-import { AppRoutingModule } from './app-routing.module.ts'; // Importa el módulo de enrutamiento
+import { AppRoutingModule } from './app-routing.module'; // Importa el módulo de enrutamiento
 import { FormsModule } from '@angular/forms'
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';  // Importar RouterModule

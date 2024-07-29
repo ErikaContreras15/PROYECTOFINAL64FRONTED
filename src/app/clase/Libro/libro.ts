@@ -1,5 +1,5 @@
 export class Libro{  
-    id: number; 
+    id!: number; 
     titulo!:String;
     autor!:String;
     isbn!:String;

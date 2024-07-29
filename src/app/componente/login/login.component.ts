@@ -1,15 +1,4 @@
-/*import { Component } from '@angular/core';
 
-@Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
-})
-export class LoginComponent {
-
-}*/
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 //import { Usuario } from 'src/app/clase/Usuarios/usuario';

@@ -1,1 +1,49 @@
-<p>menu works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraíso de los libros</title>
+    <link rel="stylesheet" href="menu.component.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.jpg" alt="Paraíso de los libros">
+        </div>
+        <h1>Paraíso de los libros</h1>
+        <nav>
+            <ul>
+                <li><a href="/menu">Inicio</a></li>
+                <li><a href="/libro">Catálogo</a></li>
+                <li><a href="/lista-prestamo">Gestión</a></li>
+                <li><a href="/historial">Historial</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button (click)="navigateToActualizarCliente()">👤</button>
+            <button (click)="cerrarSesion()">Cerrar sesión</button> 
+        </div>
+    </header>
+    <div style="display: flex; justify-content: center;">
+        <img src="assets/menu.jpg" alt="Descripción de la imagen" style="width: 75%; height: auto;">
+    </div>
+    <section class="areas">
+        <h2>Libros</h2>
+        <div class="books">
+            <div class="book">
+                <img src="assets/librouno.jpg" alt="El Señor de los Anillos">
+                <p>El Señor de los Anillos</p>
+            </div>
+            <div class="book">
+                <img src="assets/librodos.jpg" alt="Ugly Love">
+                <p>Ugly Love</p>
+            </div>
+            <div class="book">
+                <img src="assets/librotres.jpg" alt="Stardust">
+                <p>Stardust</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,1 +1,20 @@
-<p>prestamo works!</p>
+<div class="container">
+    <h2>Detalles del Libro</h2>
+    <div class="details-box">
+      <p><strong>ID del Libro:</strong> {{ libroId }}</p>
+      <p><strong>Título:</strong> {{ titulo }}</p>
+      <p><strong>Autor:</strong> {{ autor }}</p>
+      <p><strong>ISBN:</strong> {{ isbn }}</p>
+      <p><strong>Monto:</strong> {{ monto }}</p>
+      <p><strong>Año de Publicación:</strong> {{ anioPublicacion }}</p>
+    </div>
+    
+    <h2>Crear Préstamo</h2>
+    <form (ngSubmit)="onSubmit()" #prestamoForm="ngForm" class="form-box">
+      <div class="form-group">
+        <label for="dias">Dias:</label>
+        <input type="number" id="dias" [(ngModel)]="prestamo.dias" name="dias" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Guardar Préstamo</button>
+    </form>
+  </div>

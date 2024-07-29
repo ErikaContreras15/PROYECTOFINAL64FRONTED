@@ -1,0 +1,128 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #c8f4fd;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .user-actions button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .card-title {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .estado-boton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .disponible {
+    background-color: green;
+  }
+  
+  .prestado {
+    background-color: blue;
+  }
+  
+  .no-disponible {
+    background-color: red;
+    cursor: not-allowed;
+  }
+  
+  /* Estilos para los estados */
+  .status {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre el cuadro de color y el texto */
+  }
+  
+  .status .color-box {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .available .color-box {
+    background-color: green;
+  }
+  
+  .borrowed .color-box {
+    background-color: blue;
+  }
+  
+  .unavailable .color-box {
+    background-color: red;
+  }
+  
+  

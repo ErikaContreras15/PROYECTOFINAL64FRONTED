@@ -1,1 +1,41 @@
-<p>actualizar-cliente works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Cliente</title>
+    <link rel="stylesheet" href="actualizar-cliente.component.css">
+    
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="assets/logo.jpg" alt="Paraíso de los libros">
+    </div>
+    <h1>Paraíso de los libros</h1>
+    <nav>
+        <ul>
+            <li><a href="/menu">Inicio</a></li>
+            <li><a href="/libro">Catálogo</a></li>
+            <li><a href="/lista-prestamo">Gestión</a></li>
+            <li><a href="/historial">Historial</a></li>
+        </ul>
+    </nav>
+    <div class="user-actions">
+        <button (click)="navigateToActualizarCliente()">👤</button>
+        <button (click)="cerrarSesion()">Cerrar sesión</button> 
+    </div>
+</header>
+    <div  *ngIf="cliente" class="container">
+        <div class="form-container">
+            <h2>Actualizar Cliente</h2>
+            <form (ngSubmit)="updateCliente()" >
+                <input id="cedula" type="text" [(ngModel)]="cliente.cedula" name="cedula" placeholder="Cedula" readonly>
+                <input id="nombre" type="text" [(ngModel)]="cliente.nombre" name="nombre"  placeholder="Nombre" required>
+                <input id="direccion" type="text" [(ngModel)]="cliente.direccion" name="direccion" placeholder="Direcion" required>
+                <button type="submit">Actualizar Cliente</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

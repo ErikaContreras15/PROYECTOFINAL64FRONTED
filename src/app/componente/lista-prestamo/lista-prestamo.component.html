@@ -1,1 +1,41 @@
-<p>lista-prestamo works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+    <link rel="stylesheet" href="lista-prestamo.component.css">
+</head>
+<body>
+  <header>
+      <div class="logo">
+          <img src="assets/logo.jpg" alt="Paraíso de los libros">
+      </div>
+      <h1>Paraíso de los libros</h1>
+      <nav>
+      <ul>
+          <li><a href="/menu">Inicio</a></li>
+              <li><a href="/libro">Catálogo</a></li>
+              <li><a href="/lista-prestamo">Gestión</a></li>
+              <li><a href="/historial">Historial</a></li>
+          </ul>
+      </nav>
+      <div class="user-actions">
+          <button (click)="navigateToActualizarCliente()">👤</button>
+          <button (click)="cerrarSesion()">Cerrar sesión</button> 
+      </div>
+  </header>
+  <div class="card-wrapper">
+      <div *ngFor="let prestamo of prestamos" class="card">
+          <div class="card-content">
+              <h2 class="card-title">{{ prestamo['libroDetalles']?.titulo }}</h2>
+              <p><strong>Autor:</strong> {{ prestamo['libroDetalles']?.autor }}</p>
+              <p><strong>Año publicación:</strong> {{  prestamo['libroDetalles']?.anioPublicacion }}</p>
+              <p><strong>Monto: $</strong> {{ prestamo['libroDetalles']?.monto }}</p>
+              <p><strong>Dias de prestamo :</strong> {{ prestamo.dias }}</p>
+              <button (click)="devolverLibro(prestamo)">Devolver libro</button>
+          </div>
+      </div>
+  </div>
+</body>
+</html>

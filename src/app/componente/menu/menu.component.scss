@@ -1,0 +1,182 @@
+/* Reseteo de estilos para eliminar márgenes y padding predeterminados */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  /* Contenedor para centrar vertical y horizontalmente */
+  .grid-container {
+    display: grid;
+    place-items: center; /* Centra tanto horizontal como verticalmente */
+    height: 100vh; /* Asegúrate de que el contenedor ocupe toda la altura de la ventana */
+  }
+  
+  img {
+    width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción original */
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #cce7f0;
+    padding: 10px 20px;
+  }
+  
+  header .logo img {
+    height: 50px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  header .search {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .search input {
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  header .search button {
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  header .user-actions button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Slideshow container */
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    max-height: 100vh;
+    margin: auto;
+  }
+  
+  /* The slides */
+  .mySlides {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .mySlides img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+  }
+  
+  @keyframes fade {
+    from { opacity: .4 }
+    to { opacity: 1 }
+  }
+  
+  /* Áreas y Beneficios */
+  .areas .books, .benefits .benefits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .areas .book, .benefits .benefit {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+    flex: 1 1 100%;
+  }
+  
+  .areas .book img, .benefits .benefit img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Responsividad */
+  @media (min-width: 600px) {
+    .areas .book, .benefits .benefit {
+      flex: 1 1 calc(33.333% - 40px);
+    }
+  }

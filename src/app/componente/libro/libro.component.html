@@ -1,1 +1,78 @@
-<p>libro works!</p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros</title>
+    <link rel="stylesheet" href="libro.component.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.jpg" alt="Paraíso de los libros">
+        </div>
+        <h1>Paraíso de los libros</h1>
+        <nav>
+            <ul>
+                <li><a href="/menu">Inicio</a></li>
+                <li><a href="/libro">Catálogo</a></li>
+                <li><a href="/lista-prestamo">Gestión</a></li>
+                <li><a href="/historial">Historial</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button (click)="navigateToActualizarCliente()">👤</button>
+            <button (click)="cerrarSesion()">Cerrar sesión</button> 
+        </div>
+    </header>
+    <div class="search-wrapper">
+        <form (ngSubmit)="onSearch()">
+            <input type="text" [(ngModel)]="search.titulo" name="titulo" placeholder="Título">
+            <input type="text" [(ngModel)]="search.autor" name="autor" placeholder="Autor">
+            <input type="text" [(ngModel)]="search.isbn" name="isbn" placeholder="ISBN">
+            <input type="number" [(ngModel)]="search.anioPublicacion" name="anioPublicacion" placeholder="Año de Publicación">
+            <input type="number" [(ngModel)]="search.monto" name="monto" placeholder="Monto">
+            <button type="submit">Buscar</button>
+        </form>
+    </div>
+    <div class="card-wrapper">
+        <div class="card">
+            <div class="card-content">
+                <div class="status available">
+                    <div class="color-box"></div>
+                    <p><strong>Disponible:</strong></p>
+                </div>
+                <div class="status borrowed">
+                    <div class="color-box"></div>
+                    <p><strong>Prestado:</strong></p>
+                </div>
+                <div class="status unavailable">
+                    <div class="color-box"></div>
+                    <p><strong>No disponible:</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-wrapper">
+        <div *ngFor="let libro of filteredLibros" class="card">
+            <div class="card-content">
+                <h2 class="card-title">{{ libro.titulo }}</h2>
+                <p><strong>Autor:</strong> {{ libro.autor }}</p>
+                <p><strong>ISBN:</strong> {{ libro.isbn }}</p>
+                <p><strong>Año publicación:</strong> {{ libro.anioPublicacion }}</p>
+                <p><strong>Monto: $</strong> {{ libro.monto }}</p>
+                <p><strong>Estado:</strong> 
+                    <button class="estado-boton" [ngClass]="{
+                        'disponible': libro.estado === 1,
+                        'prestado': libro.estado === 2,
+                        'no-disponible': libro.estado === 3
+                    }" [disabled]="libro.estado === 3" (click)="onEstadoClick(libro)">
+                        {{ libro.estado === 1 ? 'Disponible' : (libro.estado === 2 ? 'Prestado' : 'No Disponible') }}
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
